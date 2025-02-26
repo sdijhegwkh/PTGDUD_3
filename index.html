@@ -5,9 +5,67 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <link rel="stylesheet" href="./src/index.css">
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="root">
+        <div id="head">
+          <div class="flex-container">
+            <div>
+              <img src="./src/image/Group 15.png" alt="">
+            </div>
+            <div class="search-container"><input type="text" placeholder="Tìm kiếm..." class="search"></div>
+            <div class="list-container">
+              <div class="list-item">What to cook</div>
+              <div class="list-item">Recipes</div>
+              <div class="list-item">Ingredients</div>
+              <div class="list-item">Occasions</div>
+              <div class="list-item">About us</div>
+            </div>
+            <div class="click-button">
+              <button class="button-context">
+                Your Recipe Box
+              </button>
+            </div>
+            <div class="avt">
+                <img src="./src/image/Avatar 35.png" alt="" id="avtimage">
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="left">
+            <!-- <img src="./src/image/Container 175.png" alt=""> -->
+            <center>
+              <div class="filter">
+                <h1>Filters</h1>
+                <ul>
+                  <li><input type="checkbox" id="pan-fried"><label for="pan-fried">Pan-fried</label></li>
+                  <li><input type="checkbox" id="grilled"><label for="grilled">Grilled</label></li>
+                  <li><input type="checkbox" id="sauteed"><label for="sauteed">Sauteed</label></li>
+                  <li><input type="checkbox" id="steamed"><label for="steamed">Steamed</label></li>
+                  <li><input type="checkbox" id="stir-fried"><label for="stir-fried">Stir-fried</label></li>
+                  <li><input type="checkbox" id="roasted"><label for="roasted">Roasted</label></li>
+                  <li><input type="checkbox" id="baked"><label for="baked">Baked</label></li>
+                  <li><input type="checkbox" id="stewed"><label for="stewed">Stewed</label></li>
+                </ul>
+              </div>
+            </center>
+              
+          </div>
+          <div class="right">
+            <center>
+              <h1 class="text-context">Sorry, no results were found for "cakescascssa</h1>
+              <img src="./src/image/Image 105.png" alt="">
+              <br>
+              <p>We have your Independence Day sweets covered.</p>
+              <button class="button-context">Sweet Cake</button>
+              <button class="button-context">Black Cake</button>
+              <button class="button-context">Pozole Verde</button>
+              <button class="button-context">Healthy food</button>
+            </center>
+          </div>
+        </div>
+    </div>
+    <!-- <script type="module" src="/src/main.jsx"></script> -->
   </body>
 </html>
