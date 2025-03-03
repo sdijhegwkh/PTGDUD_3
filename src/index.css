@@ -1,158 +1,174 @@
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
-
-
-#head {
-  background-color: beige;
-  height: 100px;
-  padding: 10px;
+body {
   display: flex;
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
 }
-.flex-container {
+header {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between; 
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  align-items: center; 
+  padding: 15px 30px;
+  background-color: #ffe6eb;
 }
-.flex-container > div {
-  /* background-color: #f1f1f1; */
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff5c8d;
 }
-
-.flex-container img {
-  height: 50px;
-  object-fit: contain;
-}
-.search-container {
-  position: relative;
-  display: inline-block;
-  flex-grow: 1; 
-  margin-left: 20px;
-}
-.search {
-  width: 100%;
-  max-width: 300px;
-  height: 40px;
-  padding-left: 35px;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-}
-.search:focus {
-  border-color: #007bff;
-}
-.list-container {
+.nav-links {
   display: flex;
-  gap: 20px;  
-  /* justify-content: flex-start; */
-  flex-grow: 2;  
+  gap: 60px;
+  flex: 1;
 }
-.list-item {
-  font-size: 16px;
-  padding: 10px 20px;
-  background-color: #f0f0f0;
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+input[type="text"] {
+  width: 600px;
+  margin: 0 20px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
-.list-item:hover {
-  background-color: #ddd;
-}
-.click-button{
-  margin-right: 100px;
-}
-.button-context {
-  background-color: #d8a4d8;
-  color: rgb(138, 49, 126);
-  padding: 10px 20px;
-  font-size: 16px;
+button {
+  background-color: #ff5c8d;
+  color: white;
   border: none;
-  border-radius: 5px;
+  padding: 8px 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
-
-/* Thêm hiệu ứng hover cho nút */
-.recipe-button:hover {
-  background-color: #0056b3;
-}
-#avtimage{
-  border-radius: 100px;
-  height: 100px;
-  width: 100px;
-  transform: translateY(15px);
-}
-.body{
+main {
   display: flex;
+  width: 80%;
+  margin: 20px 0;
 }
-.left{
-  width:30%;
+.filters {
+  flex: 1;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
 }
-.right{
-  width: 70%;
-  
+.filter-section {
+  margin-bottom: 15px;
 }
-.text-context{
-  margin-top: 100px;
+.stars {
+  color: gold;
 }
-/* Cấu hình cho phần tử filter */
-.filter {
-  margin: 20px;
+.no-results {
+  flex: 2;
+  text-align: center;
+}
+.no-results img {
+  width: 300px;
+  margin: 20px 0;
+}
+.tags span {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  background: #ff5c8d;
+  color: white;
+  border-radius: 5px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  background: #222;
+  color: white;
+  padding: 20px;
 }
 
-/* Cấu hình cho ul */
-.filter ul {
-  display: grid; /* Sử dụng CSS Grid */
-  grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột */
-  gap: 20px; /* Khoảng cách giữa các phần tử */
-  list-style-type: none; /* Loại bỏ dấu chấm trước mỗi phần tử */
+.footer-section {
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
   padding: 0;
 }
 
-/* Cấu hình cho li */
-.filter ul li {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  background-image: url("./src/image/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper-thumbnail.png");
+  background-size: cover;
+  background-position: center;
+  margin-left: 15px;
+}
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.checkbox-grid label {
   display: flex;
   align-items: center;
-  gap: 10px; /* Khoảng cách giữa checkbox và label */
+  gap: 5px;
+}
+.filter-section input[type="range"] {
+  width: 80%;
+}
+.rating-list {
+  list-style: none;
+  padding: 0;
 }
 
-/* Kiểu dáng cho checkbox */
-.filter ul li input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  accent-color: #007bff; /* Màu sắc của checkbox khi được chọn */
+.rating-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px 0;
+}
+
+.rating-list input[type="radio"] {
+  transform: scale(1.5);
   cursor: pointer;
 }
-
-/* Kiểu dáng cho label */
-.filter ul li label {
-  font-size: 16px;
-  cursor: pointer;
+.email {
+  width: 500px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-
-/* Hiệu ứng hover cho các phần tử li */
-.filter ul li:hover {
-  background-color: #ddd;
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
-/* Hiệu ứng khi checkbox được chọn */
-.filter ul li input[type="checkbox"]:checked + label {
-  font-weight: bold;
-  color: #007bff;
+.info-2 {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }

@@ -1,71 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <link rel="stylesheet" href="./src/index.css">
+    <title>Chefify - No Results</title>
+    <link rel="stylesheet" href="./src/index.css" />
   </head>
   <body>
-    <div id="root">
-        <div id="head">
-          <div class="flex-container">
-            <div>
-              <img src="./src/image/Group 15.png" alt="">
-            </div>
-            <div class="search-container"><input type="text" placeholder="Tìm kiếm..." class="search"></div>
-            <div class="list-container">
-              <div class="list-item">What to cook</div>
-              <div class="list-item">Recipes</div>
-              <div class="list-item">Ingredients</div>
-              <div class="list-item">Occasions</div>
-              <div class="list-item">About us</div>
-            </div>
-            <div class="click-button">
-              <button class="button-context">
-                Your Recipe Box
-              </button>
-            </div>
-            <div class="avt">
-                <img src="./src/image/Avatar 35.png" alt="" id="avtimage">
-            </div>
+    <header>
+      <div class="logo">Chefify</div>
+      <input type="text" placeholder="Search..." />
+      <nav class="nav-links">
+        <a href="#">What to Cook</a>
+        <a href="#">Recipes</a>
+        <a href="#">Ingredients</a>
+        <a href="#">Occasions</a>
+        <a href="#">About Us</a>
+      </nav>
+      <button>Your Recipe Box</button>
+      <div class="avatar"></div>
+    </header>
+    <main>
+      <aside class="filters">
+        <h3>Filters</h3>
+        <div class="filter-section">
+          <h4>Type</h4>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" /> Pan-fried</label>
+            <label><input type="checkbox" /> Stir-fried</label>
+            <label><input type="checkbox" /> Grilled</label>
+            <label><input type="checkbox" /> Roasted</label>
+            <label><input type="checkbox" /> Sauteed </label>
+            <label><input type="checkbox" /> Baked</label>
+            <label><input type="checkbox" /> Steamed</label>
+            <label><input type="checkbox" /> Stewed</label>
           </div>
         </div>
-        <div class="body">
-          <div class="left">
-            <!-- <img src="./src/image/Container 175.png" alt=""> -->
-            <center>
-              <div class="filter">
-                <h1>Filters</h1>
-                <ul>
-                  <li><input type="checkbox" id="pan-fried"><label for="pan-fried">Pan-fried</label></li>
-                  <li><input type="checkbox" id="grilled"><label for="grilled">Grilled</label></li>
-                  <li><input type="checkbox" id="sauteed"><label for="sauteed">Sauteed</label></li>
-                  <li><input type="checkbox" id="steamed"><label for="steamed">Steamed</label></li>
-                  <li><input type="checkbox" id="stir-fried"><label for="stir-fried">Stir-fried</label></li>
-                  <li><input type="checkbox" id="roasted"><label for="roasted">Roasted</label></li>
-                  <li><input type="checkbox" id="baked"><label for="baked">Baked</label></li>
-                  <li><input type="checkbox" id="stewed"><label for="stewed">Stewed</label></li>
-                </ul>
-              </div>
-            </center>
-              
-          </div>
-          <div class="right">
-            <center>
-              <h1 class="text-context">Sorry, no results were found for "cakescascssa</h1>
-              <img src="./src/image/Image 105.png" alt="">
-              <br>
-              <p>We have your Independence Day sweets covered.</p>
-              <button class="button-context">Sweet Cake</button>
-              <button class="button-context">Black Cake</button>
-              <button class="button-context">Pozole Verde</button>
-              <button class="button-context">Healthy food</button>
-            </center>
-          </div>
+        <div class="filter-section">
+          <h4>Time</h4>
+          <input type="range" min="10" max="60" />
         </div>
-    </div>
-    <!-- <script type="module" src="/src/main.jsx"></script> -->
+        <div class="filter-section">
+          <h4>Rating</h4>
+          <ul class="rating-list">
+            <li><input type="radio" name="rating" value="1" /> ★☆☆☆☆</li>
+            <li><input type="radio" name="rating" value="2" /> ★★☆☆☆</li>
+            <li><input type="radio" name="rating" value="3" /> ★★★☆☆</li>
+            <li><input type="radio" name="rating" value="4" /> ★★★★☆</li>
+            <li><input type="radio" name="rating" value="5" /> ★★★★★</li>
+          </ul>
+        </div>
+        <button>Apply</button>
+      </aside>
+      <section class="no-results">
+        <h2>Sorry, no results were found for "cakescascsa"</h2>
+        <img src="./src/image/Image 105.png" alt="No results found" />
+        <h1>We have all your Independence Day sweets covered.</h1>
+        <div class="tags">
+          <button>Sweet Cake</button>
+          <button>Cake</button>
+          <button>Pico de Verde</button>
+          <button>Healthy Food</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-section">
+        <h1>About us</h1>
+        <br />
+        <p>
+          Welcome to our website, a wonderful place to explore and learn how to
+          cook like a pro.
+        </p>
+        <br />
+        <div class="info">
+          <input type="email" placeholder="Enter your email" class="email" />
+          <button>Send</button>
+        </div>
+        <div class="info-2">
+            <div class="logo">Chefify</div>
+            <p>2023 Chefify company</p>
+            <p>Tern of serviced Privacy Policy</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Learn More</h3>
+        <ul>
+          <li><a href="#">Our Cooks</a></li>
+          <li><a href="#">See Our Features</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#">Gift Subscription</a></li>
+          <li><a href="#">Send Us Feedback</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Recipes</h3>
+        <ul>
+            <li><a href="#">What to cook this week</a></li>
+            <li><a href="#">Pasta</a></li>
+            <li><a href="#">Dinner</a></li>
+            <li><a href="#">Healthy</a></li>
+            <li><a href="#">Vegetarian</a></li>
+            <li><a href="#">Vegan</a></li>
+            <li><a href="#">Christmas</a></li>
+          </ul>
+      </div>
+    </footer>
   </body>
 </html>
